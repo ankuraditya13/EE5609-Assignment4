@@ -164,25 +164,60 @@ Now for an equilateral triangle,
 \norm{\vec{A-B}} = \norm{\vec{B-C}} = \norm{\vec{A-C}}
 \label{eq2}
 \end{align}
-In figure \ref{Fig 1}, taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get,
+Let, $\vec{B}$ be the origin.Hence, $\vec{B}$ = 0. Hence substituting in the equation \eqref{eq2} we get,
+\begin{align}
+\norm{\vec{A}} = \norm{\vec{C}} =\norm{\vec{A}-\vec{C}}
+\label{e1}
+\end{align}
+Squaring $\norm{\vec{A}-\vec{C}}$ we get,
+\begin{align}
+\norm{\vec{A}-\vec{C}}^2 = \norm{\vec{A}}^2+\norm{\vec{C}}^2-2\vec{A}^T\vec{C}
+\end{align} 
+Substituting from equation \eqref{e1} in above equation, 
+\begin{align}
+\implies \norm{\vec{A}}^2 = 2\norm{\vec{A}}^2-2\vec{A}^T\vec{C}
+\end{align}
+\begin{align}
+\implies \norm{\vec{A}}^2 = 2\vec{A}^T\vec{C}
+\label{eq4}
+\end{align}
+\begin{tikzpicture}
+
+\draw (0,0) node[anchor=north]{$B$}-- (4,6.9282) node[anchor=west]{$A$}-- (8,0) node[anchor=north]{$C$}-- cycle;
+
+\draw (0,0) (0:0.75cm) arc (0:60:0.75cm);
+
+\draw (30:1.15cm) node{$\theta$};
+
+
+\end{tikzpicture}
+In above figure, taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get,
 \begin{align}
 \vec{AB}\cdot\vec{BC} = \norm{\vec{AB}}\norm{\vec{BC}}\cos\theta
 \label{eq3}
-\end{align} 
-Let, $ \vec{a} = \vec{A}-\vec{B}, \vec{b} = \vec{B}-\vec{C}$. Hence $\vec{A}-\vec{C} = \vec{a}+\vec{b}.\\\therefore$ the angle $\theta$ between two vectors  $\vec{AB}$ and $\vec{BC}$ is given by,
+\end{align}
+Substituting these results in \eqref{eq3} and solving for $\cos\theta$ we get,
+
 \begin{comment}
 \begin{align}
 \cos\theta  = \brak{\frac{\norm{\vec{a}}^2 + \norm{\vec{b}}^2 - \norm{\vec{a}+\vec{b}}^2}{2\norm{\vec{a}}\norm{\vec{b}}}}
 \end{align}
 \end{comment}
 \begin{align}
-\cos\theta = \frac{\vec{a}^T\cdot\vec{b}}{\norm{\vec{a}}\norm{\vec{b}}}
+\cos\theta = \frac{(\vec{A}-\vec{B})^T\cdot(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}}
 \end{align}
-Substituting from equation \ref{eq2} to \ref{eq3} we get,
+\begin{align}
+\implies \cos\theta = \frac{\vec{A}^T\cdot\vec{C}}{\norm{\vec{A}}\norm{\vec{C}}}
+\label{e2}
+\end{align}
+Imposing the results of \eqref{eq4} in \eqref{e2} we get,
+\begin{align}
+\implies \cos\theta = \frac{\vec{A}^T\cdot\vec{C}}{2\vec{A}^T\vec{C}}
+\end{align}
 \begin{align}
 \implies \cos\theta = \frac{1}{2}
 \end{align}
-we know that $\theta = 60\degree$ for an equilateral triangle 
+$\therefore \theta = 60\degree$
 \begin{align}
 \therefore \cos60\degree = \frac{1}{2}
 \end{align}
@@ -192,15 +227,10 @@ Now using the property,
 \end{align} 
 $\therefore$ at $\theta = 60\degree, $
 \begin{align}
-\sin60\degree = \sqrt{1-\cos^260\degree}
+\implies \sin60\degree = \sqrt{1-\cos^260\degree}
 \end{align}
 \begin{align}
 \implies\sin60\degree = \frac{\sqrt{3}}{2}.
 \end{align}
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{a_4_2.png}
-\caption{Equilateral Triangle}
-\label{Fig 1}
-\end{figure}
+
 \end{document}
