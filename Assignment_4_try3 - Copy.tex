@@ -191,49 +191,45 @@ Substituting from equation \eqref{e1} in above equation,
 
 
 \end{tikzpicture}
-Now by Lagrange's Identity, cross product of vectors $\vec{AB}$ and $\vec{BC}$ can be represented in terms of inner products of $\vec{AB}$ and $\vec{BC}$,
+In above figure, taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get,
 \begin{align}
-\norm{\vec{AB}\times\vec{BC}}^2 = \norm{\vec{AB}}^2\norm{\vec{BC}}^2-(\vec{AB}\cdot\vec{BC})^2
-\end{align}
-\begin{align}
-\implies (\vec{AB}\cdot\vec{BC})^2 = \norm{\vec{AB}}^2\norm{\vec{BC}}^2 - \norm{\vec{AB}\times\vec{BC}}^2 
-\end{align}
-\begin{align}
-\implies (\vec{AB}\cdot\vec{BC})^2 = \norm{\vec{AB}}^2\norm{\vec{BC}}^2 - \norm{\vec{AB}}^2\norm{\vec{BC}}^2 \sin^2\theta
-\end{align}
-\begin{align}
-\implies (\vec{AB}\cdot\vec{BC})^2 = \norm{\vec{AB}}^2\norm{\vec{BC}}^2 (1-\sin^2\theta)
-\end{align}
-Imposing the condition that $\vec{B}$ is at origin,
-\begin{align}
-\implies \vec{A}^T\vec{C} = \norm{\vec{A}}\norm{\vec{C}} \sqrt{1-\sin^2\theta}
+\vec{AB}\cdot\vec{BC} = \norm{\vec{AB}}\norm{\vec{BC}}\cos\theta
 \label{eq3}
 \end{align}
-Substituting the results of \eqref{eq4} in \eqref{eq3} and solving for $\sqrt{1-\sin^2\theta}$ we get,
+Substituting these results in \eqref{eq3} and solving for $\cos\theta$ we get,
+
+\begin{comment}
 \begin{align}
-\sqrt{1-\sin^2\theta} = \frac{\vec{A}^T\cdot\vec{C}}{\norm{\vec{A}}\norm{\vec{C}}}
+\cos\theta  = \brak{\frac{\norm{\vec{a}}^2 + \norm{\vec{b}}^2 - \norm{\vec{a}+\vec{b}}^2}{2\norm{\vec{a}}\norm{\vec{b}}}}
 \end{align}
-From equation \eqref{e1}, $\norm{\vec{A}} = \norm{\vec{C}}$.
+\end{comment}
 \begin{align}
-\implies \sqrt{1-\sin^2\theta} = \frac{\vec{A}^T\cdot\vec{C}}{\norm{\vec{A}}^2}
+\cos\theta = \frac{(\vec{A}-\vec{B})^T\cdot(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}}
+\end{align}
+\begin{align}
+\implies \cos\theta = \frac{\vec{A}^T\cdot\vec{C}}{\norm{\vec{A}}\norm{\vec{C}}}
 \label{e2}
 \end{align}
 Imposing the results of \eqref{eq4} in \eqref{e2} we get,
 \begin{align}
-\implies \sqrt{1-\sin^2\theta} = \frac{\vec{A}^T\cdot\vec{C}}{2\vec{A}^T\vec{C}}
+\implies \cos\theta = \frac{\vec{A}^T\cdot\vec{C}}{2\vec{A}^T\vec{C}}
 \end{align}
 \begin{align}
-\implies \sqrt{1-\sin^2\theta} = \frac{1}{2}
+\implies \cos\theta = \frac{1}{2}
 \end{align}
-Squaring both the sides and solving for $\sin\theta$ we get,
+$\therefore \theta = 60\degree$
 \begin{align}
-\therefore \sin^2\theta = 1-\frac{1}{4}
+\therefore \cos60\degree = \frac{1}{2}
+\end{align}
+Now using the property,
+\begin{align}
+\cos^2\theta +\sin^2\theta = 1
+\end{align} 
+$\therefore$ at $\theta = 60\degree, $
+\begin{align}
+\implies \sin60\degree = \sqrt{1-\cos^260\degree}
 \end{align}
 \begin{align}
-\implies\sin\theta = \frac{\sqrt{3}}{2}.
-\end{align}
-$\therefore \theta = 60\degree$ 
-\begin{align}
-\implies \sin60\degree = \frac{\sqrt{3}}{2}.
+\implies\sin60\degree = \frac{\sqrt{3}}{2}.
 \end{align}
 \end{document}
