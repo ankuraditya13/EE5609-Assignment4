@@ -193,26 +193,20 @@ Substituting from equation \eqref{e1} in above equation,
 \end{tikzpicture}
 In above figure, taking inner products of side $\vec{AB}$ and $\vec{BC}$ we get,
 \begin{align}
-\vec{AB}\cdot\vec{BC} = \norm{\vec{AB}}\norm{\vec{BC}}\cos\theta
+(\vec{AB})^T\vec{BC} = \norm{\vec{AB}}\norm{\vec{BC}}\cos\theta
 \label{eq3}
 \end{align}
 Substituting these results in \eqref{eq3} and solving for $\cos\theta$ we get,
-
-\begin{comment}
 \begin{align}
-\cos\theta  = \brak{\frac{\norm{\vec{a}}^2 + \norm{\vec{b}}^2 - \norm{\vec{a}+\vec{b}}^2}{2\norm{\vec{a}}\norm{\vec{b}}}}
-\end{align}
-\end{comment}
-\begin{align}
-\cos\theta = \frac{(\vec{A}-\vec{B})^T\cdot(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}}
+\cos\theta = \frac{(\vec{A}-\vec{B})^T(\vec{B}-\vec{C})}{\norm{\vec{A}-\vec{B}}\norm{\vec{B}-\vec{C}}}
 \end{align}
 \begin{align}
-\implies \cos\theta = \frac{\vec{A}^T\cdot\vec{C}}{\norm{\vec{A}}\norm{\vec{C}}}
+\implies \cos\theta = \frac{\vec{A}^T\vec{C}}{\norm{\vec{A}}\norm{\vec{C}}}
 \label{e2}
 \end{align}
 Imposing the results of \eqref{eq4} in \eqref{e2} we get,
 \begin{align}
-\implies \cos\theta = \frac{\vec{A}^T\cdot\vec{C}}{2\vec{A}^T\vec{C}}
+\implies \cos\theta = \frac{\vec{A}^T\vec{C}}{2\vec{A}^T\vec{C}}
 \end{align}
 \begin{align}
 \implies \cos\theta = \frac{1}{2}
